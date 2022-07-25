@@ -1,0 +1,17 @@
+div{
+    background-color: #0c56a6;
+}
+
+app-social{
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/*Para fijar la navbar y que baje al scrollear.
+Z-INDEX evita que las cards y otros elementos se superpongan por encima de la navbar.*/
+.stick {
+    position:sticky;
+    top: 0;
+    z-index: 1020;
+}
