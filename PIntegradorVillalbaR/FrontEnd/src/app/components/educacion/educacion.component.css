@@ -11,3 +11,12 @@
     margin: 1em;
 }
 
+.ac-btn1 {
+    background-color:#0c56a6af;
+    color: rgb(240, 240, 240);
+    font-weight: bold;
+}
+
+.accordion-item {
+    border-color: black;
+}

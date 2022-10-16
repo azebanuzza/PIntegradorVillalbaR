@@ -2,3 +2,13 @@
     width: 200px;
     height: 200px;
 }
+
+.card {
+    width: 20rem;
+    height: 20rem;
+}
+
+.img-fluid {
+    max-width: 320px;
+    max-height: 240px;
+}

@@ -1,18 +1,14 @@
+.about {
+    max-width: 700px;
+}
+
 .container {
     margin-top: 20px;
-    left:10%;
 }
 
 
 img {
-    border-radius: 15px 50px;
-}
-
-#nombre {
-    font-size: 30px;
-    margin-top: 5px;
-}
-
-#titulo {
-    font-size: 20px;
+    border-radius: 15px 30px;
+    width: 200px;
+    height: 200px;
 }

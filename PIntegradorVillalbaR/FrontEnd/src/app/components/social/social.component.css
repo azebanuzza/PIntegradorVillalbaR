@@ -3,3 +3,6 @@ svg {
     margin-right: 3px;
 }
 
+svg:hover {
+    color: darkblue;
+}

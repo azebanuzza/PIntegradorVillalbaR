@@ -1,0 +1,25 @@
+.background-img {
+    background-image: url(../../../assets/fondo2.jpg);
+    background-size: cover;
+}
+
+.tyc {
+    margin: 20px;
+}
+
+.ingresa {
+    font-size: 20px;
+}
+
+.card {
+    border-width:2px;
+    border-radius: 2em;
+}
+
+.form-control {
+    border-width:1px;
+}
+
+.card-body {
+    padding: 20px;
+}

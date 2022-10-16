@@ -1,27 +1,38 @@
-<div class="container">    
-    <div class="row d-flex justify-content-center">
+<div class="container about">
+  <div class="text-center p-1">
+    <p class="fs-1 text-uppercase">
+      {{ persona.nombre }} {{ persona.apellido }}
+    </p>
+    <h4 id="titulo" class="mb-4">Full Stack Developer Jr.</h4>
+  </div>
 
-        <div class="col-xs-2 col-sm-4 col-md-4 col-lg-2">
-            <img src="../../../assets/doge.jpg" class="img img-thumbnail" id=fotoperfil>
-        </div>
-
-        <div class="col-xs-2 col-sm-8 col-md-3 col-lg-2">
-            <p id=nombre>Villalba, Rodrigo</p>
-            <p id=titulo>Full Stack Developer Jr.</p>
-        </div>
-
-        <div class="col-xs-8 col-sm-12 col-md-5 col-lg-6">
-            <span>
-                <h1>Acerca de mí</h1>
-                <p>
-                Estudiante autodidacta de desarrollo web.
-                <br>
-                Argentino, 29 años.
-                <br>
-                Estudio en mi tiempo libre, actualmente me interesa el desarrollo web. Como hobby, practico 'pixelart', y pronto empezaré a experimentar con Blender.
-                </p>
-            </span>
-        </div>
-
+  <div class="d-flex shadow rounded-5 align-items-center mb-3">
+    <div class="flex-shrink-0">
+      <img
+        src="{{ persona.img }}"
+        alt="Foto de perfil"
+        class="img img-thumbnail"
+      />
     </div>
+
+    <div class="container">
+      <div class="col d-flex justify-content-end">
+        <button
+          type="button"
+          class="btn btn-primary"
+          *ngIf="isLogged"
+          routerLink="/editaboutme/4"
+        >
+          <i class="fa fa-pen-to-square fa-bounce text-light"></i>
+          Editar "Acerca de"
+        </button>
+      </div>
+
+      <div>
+        <p class="text-justify">
+          {{ persona.aboutme }}
+        </p>
+      </div>
+    </div>
+  </div>
 </div>

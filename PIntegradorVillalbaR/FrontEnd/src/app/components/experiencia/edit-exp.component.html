@@ -1,0 +1,82 @@
+<div class="container border p-3 mt-3 bg-light" *ngIf="expLab">
+  <div class="d-flex justify-content-center">
+    <h1>Editar experiencia:</h1>
+  </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="titulo"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="titulo"
+            name="titulo"
+            [(ngModel)]="expLab.titulo"
+            required
+            placeholder="Puesto"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="descripcion"></label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="descripcion"
+            name="descripcion"
+            [(ngModel)]="expLab.descripcion"
+            required
+            placeholder="Descripción del trabajo"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="fecha"
+            name="fecha"
+            [(ngModel)]="expLab.fecha"
+            required
+            placeholder="Fecha en formato: Mes Año - Mes Año"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="img"></label>
+          <input
+            type="text"
+            [(ngModel)]="expLab.img"
+            class="form-control"
+            id="img"
+            name="img"
+            placeholder="URL del logo de la empresa"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="alt"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="alt"
+            name="alt"
+            [(ngModel)]="expLab.alt"
+            required
+            placeholder="Texto alternativo para imágenes (accesibilidad)"
+          />
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href=""
+            ><button class="btn btn-dark mt-3">Cancelar y volver</button></a
+          >
+          <button class="btn btn-primary mt-3">Agregar experiencia</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
