@@ -1,8 +1,0 @@
-COSAS QUE AÑADIR AL PORTFOLIO:
-
-- Más skills (hard y soft).
-- Mi dirección de e-mail.
-- Logos al lado de cada ítem en educación y en experiencia.
-- Título a "Skills".
-- Mejorar las descripciones de los ejemplos píxel.
-- Cambiar las imágenes de proyectos a algo "WIP" related.
