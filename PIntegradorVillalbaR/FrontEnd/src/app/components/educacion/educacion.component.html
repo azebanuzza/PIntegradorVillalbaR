@@ -1,72 +1,53 @@
-<div class="d-flex justify-content-center">
-  <div class="container">
-    <h2 class="d-flex justify-content-center text-uppercase mb-3">
-      Educación:
-    </h2>
-    <div class="accordion" id="accordionPanelsStayOpenExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-          <button
-            class="accordion-button ac-btn1 text-uppercase"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseOne"
-            aria-expanded="true"
-            aria-controls="panelsStayOpen-collapseOne"
-          >
-            #Argentina Programa
-          </button>
-        </h2>
-        <div
-          id="panelsStayOpen-collapseOne"
-          class="accordion-collapse collapse show"
-          aria-labelledby="panelsStayOpen-headingOne"
+<div class="container">
+  <div class="row">
+    <h2 class="d-flex justify-content-center text-uppercase">Formación:</h2>
+  </div>
+
+  <div class="card text-bg-light p-2 border border-4 shadow rounded-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      routerLink="/nuevaeduca"
+      *ngIf="isLogged"
+    >
+      Añadir educación
+    </button>
+
+    <div
+      class="card-body justify-content-between"
+      *ngFor="let Educacion of educa"
+    >
+      <img
+        [src]="Educacion.imgEdu"
+        class="rounded logo float-end rounded-5"
+        alt="{{ Educacion.altImgEdu }}"
+      />
+
+      <h5 class="card-title">
+        {{ Educacion.tituloEdu }}
+      </h5>
+
+      <h6 class="card-subtitle mb-2 text-muted">{{ Educacion.fechaEdu }}</h6>
+      <p class="card-text">{{ Educacion.descripcionEdu }}</p>
+      <div class="container d-flex justify-content-between">
+        <button
+          class="btn btn-primary"
+          *ngIf="isLogged"
+          routerLink="/editeduca/{{ Educacion.id }}"
         >
-          <div class="accordion-body bg-light border border-4">
-            Curso digital asincrónico organizado por el Ministerio de Desarrollo
-            Productivo de Argentina, y certificado por la Cámara Argentina de la
-            Industria del Software (CESSI). Nociones básicas sobre: -
-            Fundamentos de programación, - POO, - Competencias Full-Stack Jr.
-            (HTML, CSS, JS, Java).
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-          <button
-            class="accordion-button ac-btn1 collapsed btn text-uppercase"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#panelsStayOpen-collapseTwo"
-            aria-expanded="true"
-            aria-controls="panelsStayOpen-collapseTwo"
-          >
-            Otros cursos relevantes:
-          </button>
-        </h2>
-        <div
-          id="panelsStayOpen-collapseTwo"
-          class="accordion-collapse collapse"
-          aria-labelledby="panelsStayOpen-headingTwo"
+          <i class="fa-solid fa-pencil"></i> Editar
+        </button>
+
+        <button
+          class="btn btn-danger"
+          (click)="delete(Educacion.id)"
+          *ngIf="isLogged"
         >
-          <div class="accordion-body bg-light border border-4">
-            - UTN: Fundamentos de la programación (Curso virtual destinado a
-            enseñar las bases de la programación)
-            <a
-              href="https://sceu.frba.utn.edu.ar/e-learning/detalle/curso/338/fundamentos-de-la-programacion?id=999188123"
-              target="_blank"
-              >Sitio web</a
-            >
-            <hr />
-            - Inglés nivel B2.
-            <a
-              href="https://sites.google.com/view/li-fh-unmdp/sobre-nosotros"
-              target="_blank"
-              >Sitio web de la institución</a
-            >
-          </div>
-        </div>
+          <i class="fa-regular fa-trash-can"></i> Borrar
+        </button>
       </div>
+
+      <hr />
     </div>
   </div>
 </div>

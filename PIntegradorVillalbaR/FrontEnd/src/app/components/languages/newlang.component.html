@@ -1,0 +1,81 @@
+<div class="container border p-3 mt-3 bg-light">
+  <div class="d-flex justify-content-center">
+    <h1>Añadir lenguaje nueva:</h1>
+  </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="name"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            [(ngModel)]="name"
+            required
+            placeholder="Idioma"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="nivel"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="nivel"
+            name="nivel"
+            [(ngModel)]="nivel"
+            required
+            placeholder="Nivel obtenido en el lenguaje"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="description"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            name="description"
+            [(ngModel)]="description"
+            required
+            placeholder="Descripción opcional"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="imgLang"></label>
+          <input
+            type="text"
+            [(ngModel)]="imgLang"
+            class="form-control"
+            id="imgLang"
+            name="imgLang"
+            placeholder="URL del logo representativo del lenguaje"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="altImg"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="altImg"
+            name="altImg"
+            [(ngModel)]="altImg"
+            required
+            placeholder="Texto alternativo para imágenes (accesibilidad)"
+          />
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href=""
+            ><button class="btn btn-dark mt-3">Cancelar y volver</button></a
+          >
+          <button class="btn btn-primary mt-3">Agregar lenguaje</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

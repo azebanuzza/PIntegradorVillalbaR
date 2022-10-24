@@ -1,6 +1,6 @@
 <div class="container about">
   <div class="text-center p-1">
-    <p class="fs-1 text-uppercase">
+    <p class="fs-1 text-uppercase nombre">
       {{ persona.nombre }} {{ persona.apellido }}
     </p>
     <h4 id="titulo" class="mb-4">Full Stack Developer Jr.</h4>
@@ -23,7 +23,7 @@
           *ngIf="isLogged"
           routerLink="/editaboutme/4"
         >
-          <i class="fa fa-pen-to-square fa-bounce text-light"></i>
+          <i class="fa fa-pen-to-square text-light"></i>
           Editar "Acerca de"
         </button>
       </div>
@@ -35,4 +35,11 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="d-flex justify-content-center" style="background-color: white">
+  <p style="color: red; font-weight: bolder" *ngIf="isLogged">
+    ADVERTENCIA: Hasta nuevo aviso, tocar el botón "BORRAR" de un elemento, lo
+    eliminará definitivamente sin pedir confirmación. Usar con discreción.
+  </p>
 </div>

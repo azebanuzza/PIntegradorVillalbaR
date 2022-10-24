@@ -11,7 +11,6 @@ import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +24,19 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { EditExpComponent } from './components/experiencia/edit-exp.component';
+import { NewEducacionComponent } from './components/educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { HSkillsComponent } from './components/hskills/hskills.component';
+import { NewHSkillsComponent } from './components/hskills/new-hskills.component';
+import { EditHskillsComponent } from './components/hskills/edit-hskills.component';
+import { SskillsComponent } from './components/sskills/sskills.component';
+import { EditSSkillsComponent } from './components/sskills/edit-sskills.component';
+import { NewsskillsComponent } from './components/sskills/newsskills.component';
+import { LanguagesComponent } from './components/languages/languages.component';
+import { EdilangComponent } from './components/languages/edilang.component';
+import { NewlangComponent } from './components/languages/newlang.component';
+import { NewProjectComponent } from './components/proyectos/new-project.component';
+import { EditProjectComponent } from './components/proyectos/edit-project.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +48,6 @@ import { EditExpComponent } from './components/experiencia/edit-exp.component';
     AcercaDeComponent,
     ExperienciaComponent,
     EducacionComponent,
-    SkillsComponent,
     ProyectosComponent,
     FooterComponent,
     LoginComponent,
@@ -45,6 +56,19 @@ import { EditExpComponent } from './components/experiencia/edit-exp.component';
     NewExperienciaComponent,
     EditAboutmeComponent,
     EditExpComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    HSkillsComponent,
+    NewHSkillsComponent,
+    EditHskillsComponent,
+    SskillsComponent,
+    EditSSkillsComponent,
+    NewsskillsComponent,
+    LanguagesComponent,
+    EdilangComponent,
+    NewlangComponent,
+    NewProjectComponent,
+    EditProjectComponent,
   ],
   imports: [
     BrowserModule,

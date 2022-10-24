@@ -1,14 +1,11 @@
-.gif {
-    width: 200px;
-    height: 200px;
+h1, h2, h3, h4, h5, h6 {
+    color: #0c56a6;
 }
 
-.card {
-    width: 20rem;
-    height: 20rem;
+.descrip {
+    min-height: 80px;
 }
 
-.img-fluid {
-    max-width: 320px;
-    max-height: 240px;
+.fa-brands {
+    min-width: 45px;
 }

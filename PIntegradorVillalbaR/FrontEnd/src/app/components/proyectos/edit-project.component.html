@@ -1,0 +1,93 @@
+<div class="container border p-3 mt-3 bg-light" *ngIf="project">
+  <div class="d-flex justify-content-center">
+    <h1>Editar proyecto:</h1>
+  </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="proName">Nombre del proyecto</label>
+          <input
+            type="text"
+            class="form-control"
+            id="proName"
+            name="proName"
+            [(ngModel)]="project.proName"
+            required
+            placeholder="Nombre del proyecto"
+          />
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="proDescription">Descripción y fecha</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="proDescription"
+            name="proDescription"
+            [(ngModel)]="project.proDescription"
+            required
+            placeholder="Descripción y fecha de realización del proyecto"
+          ></textarea>
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="proImg">Enlace a vista previa</label>
+          <input
+            type="text"
+            class="form-control"
+            id="proImg"
+            name="proImg"
+            [(ngModel)]="project.proImg"
+            required
+            placeholder="Vista previa del proyecto"
+          />
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="altImg">Texto alternativo para imágenes</label>
+          <input
+            type="text"
+            class="form-control"
+            id="altImg"
+            name="altImg"
+            [(ngModel)]="project.altImg"
+            required
+            placeholder="Texto alternativo para imágenes (accesibilidad)"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="opUrl">Enlace a live demo</label>
+          <input
+            type="text"
+            [(ngModel)]="project.opUrl"
+            class="form-control"
+            id="opUrl"
+            name="opUrl"
+            placeholder="Enlace a live demo del proyecto"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="repository">Enlace a repositorio en GitHub</label>
+          <input
+            type="text"
+            [(ngModel)]="project.repository"
+            class="form-control"
+            id="repository"
+            name="repository"
+            placeholder="Enlace a repositorio en GitHub del proyecto"
+          />
+        </div>
+
+        <div class="d-flex justify-content-between mt-4 mb-2">
+          <button class="btn btn-primary mt-3">Confirmar cambios</button>
+        </div>
+      </form>
+      <a href=""
+        ><button class="btn btn-dark mt-3">Cancelar cambios y volver</button></a
+      >
+    </div>
+  </div>
+</div>

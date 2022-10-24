@@ -1,0 +1,166 @@
+<div class="contHardainer border p-3 mt-3 bg-light" *ngIf="sskill">
+  <div class="d-flex justify-content-center">
+    <h1>Editar Soft skill:</h1>
+  </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="namess">Nombre de soft skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id="namess"
+            name="namess"
+            [(ngModel)]="sskill.namess"
+            required
+            placeholder="Nombre de soft skill"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="icon"
+            >Icono de fontawesome. Ejemplo de formato: fa-solid
+            fa-user-clock</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="icon"
+            name="icon"
+            [(ngModel)]="sskill.icon"
+            required
+            placeholder="Icono de la soft skill. Ejemplo: fa-solid fa-user-plus"
+          />
+          <p>
+            Para ver más ejemplos:
+            <a
+              href="https://fontawesome.com/search?q=person&o=r&m=free"
+              target="_blank"
+              >Fontawesome icons</a
+            >
+          </p>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="percentage">Un número del 1 al 100</label>
+          <input
+            type="text"
+            [(ngModel)]="sskill.percentage"
+            class="form-control"
+            id="percentage"
+            name="percentage"
+            placeholder="Número del 1 al 100"
+          />
+        </div>
+
+        <div class="form-group mt-4">
+          <label for="color"
+            >Color de la barra usando Bootstrap5. Por ejemplo: warning</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="color"
+            name="color"
+            [(ngModel)]="sskill.color"
+            required
+            placeholder="Por ejemplo: primary"
+          />
+
+          <div class="container">
+            <div class="row mt-4 p-2 d-flex justify-content-between">
+              <div class="col-3">
+                <p class="text-primary">Ejemplo primary</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-primary"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <p class="text-secondary">Ejemplo secondary</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-secondary"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <p class="text-success">Ejemplo success</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-2 mt-2 p-2 d-flex justify-content-between">
+              <div class="col-3">
+                <p class="text-danger">Ejemplo danger</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-danger"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <p class="text-warning">Ejemplo warning</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-warning"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="col-3">
+                <p class="text-dark">Ejemplo dark</p>
+                <div class="progress">
+                  <div
+                    class="progress-bar bg-dark"
+                    role="progressbar"
+                    style="width: 50%"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <button class="btn btn-primary mt-3">Confirmar cambios</button>
+        </div>
+      </form>
+
+      <a href=""
+        ><button class="btn btn-dark mt-3">Cancelar cambios y volver</button></a
+      >
+    </div>
+  </div>
+</div>

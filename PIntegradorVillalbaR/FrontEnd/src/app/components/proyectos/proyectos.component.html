@@ -1,179 +1,73 @@
-<section class="pt-5 pb-5">
-  <div class="container" data-aos="zoom-in" data-aos-delay="100">
-    <div class="row">
-      <a
-        class="btn mb-3 col"
-        href="#antSlide"
-        role="button"
-        data-bs-slide="prev"
-      >
-        <i class="fa-solid fa-circle-left fa-3x" style="color: #0c56a6"></i>
-      </a>
-      <h3 class="col mb-3 d-flex justify-content-center text-uppercase">
-        Proyectos realizados
-      </h3>
+<div class="d-flex justify-content-center">
+  <h1 class="p-3 mt-5">Proyectos:</h1>
+</div>
 
-      <a
-        class="btn mb-3 col"
-        href="#sigSlide"
-        role="button"
-        data-bs-slide="next"
+<div class="d-flex justify-content-center">
+  <button
+    type="button"
+    class="btn btn-primary"
+    routerLink="/nuevoproyecto"
+    *ngIf="isLogged"
+  >
+    Añadir proyecto
+  </button>
+</div>
+
+<div class="container mt-3 mb-5">
+  <div class="row d-flex justify-content-center">
+    <div
+      class="card col-4 border-0 bg-light p-3"
+      *ngFor="let Project of project"
+      style="width: 25rem"
+    >
+      <img
+        class="shadow rounded-3 m-1"
+        [src]="Project.proImg"
+        alt="{{ Project.altImg }}"
+        style="height: auto; width: 350px"
+      />
+
+      <h5 class="mt-2">{{ Project.proName }}</h5>
+      <p
+        style="text-align: justify; text-justify: inter-word mb-4"
+        class="container descrip"
       >
-        <i class="fa-solid fa-circle-right fa-3x" style="color: #0c56a6"></i>
-      </a>
-    </div>
-    <div class="col-12">
-      <div
-        id="antSlide"
-        class="carousel slide carousel-fade"
-        data-ride="carousel"
-      >
-        <div id="sigSlide" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner rounded-2">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="Proyecto Argentina Programa"
-                      src="../../../assets/proyectoap.png"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Proyecto #AP</h4>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Portfolio web de #ArgentinaPrograma.</small
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="WIP"
-                      src="../../../assets/destornillador.jpg"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Proyecto 2</h4>
-                      <p class="card-text">
-                        <small class="text-muted">Ingrese proyecto aquí.</small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="WIP"
-                      src="../../../assets/martillo.jpg"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Proyecto 3</h5>
-                      <p class="card-text">
-                        <small class="text-muted"
-                          >Wow, mirá cuántos proyectos.</small
-                        >
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="WIP"
-                      src="../../../assets/pintando.jpg"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Proyecto 4</h4>
-                      <p class="card-text">WIP</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="WIP"
-                      src="../../../assets/sierra.jpg"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Proyecto 5</h4>
-                      <p class="card-text">WIP</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="WIP"
-                      src="../../../assets/signo.jpg"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Proyecto 6</h4>
-                      <p class="card-text">WIP</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid"
-                      alt="WIP"
-                      src="../../../assets/Aiun.gif"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Aiun.gif</h4>
-                      <p class="card-text">
-                        Intento de recrear a una de mis gatas con PixelArt.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid gif"
-                      alt="WIP"
-                      src="../../../assets/Caballero.gif"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Caballero.gif</h4>
-                      <p class="card-text">Mi primera creación.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-2 d-flex justify-content-center">
-                  <div class="card">
-                    <img
-                      class="img-fluid gif"
-                      alt="WIP"
-                      src="../../../assets/Soldado.gif"
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title">Soldado.gif</h4>
-                      <p class="card-text">En mi cabeza, estaba bueno.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {{ Project.proDescription }}
+      </p>
+
+      <div class="d-flex justify-content-evenly">
+        <button type="button" class="btn btn-dark">
+          <a href="{{ Project.repository }}" target="_blank"
+            ><i class="fa-brands fa-github text-secondary fa-2x"></i
+          ></a>
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary d-flex justify-content-center"
+        >
+          <a href="{{ Project.opUrl }}" target="_blank"
+            ><i class="fa-solid fa-link text-light fa-2x"></i
+          ></a>
+        </button>
+      </div>
+
+      <div class="d-flex justify-content-evenly">
+        <button
+          class="btn btn-primary"
+          *ngIf="isLogged"
+          routerLink="/editproyecto/{{ Project.id }}"
+        >
+          <i class="fa-solid fa-pencil"></i>
+        </button>
+
+        <button
+          class="btn btn-danger"
+          (click)="delete(Project.id)"
+          *ngIf="isLogged"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
       </div>
     </div>
   </div>
-</section>
+</div>

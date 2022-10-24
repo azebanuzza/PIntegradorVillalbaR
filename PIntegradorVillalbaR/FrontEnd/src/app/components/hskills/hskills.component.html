@@ -1,0 +1,71 @@
+<div class="d-flex row justify-content-evenly m-5">
+  <div>
+    <h2 class="text-uppercase d-flex justify-content-evenly">Hard skills</h2>
+  </div>
+
+  <div class="d-flex justify-content-evenly mb-2 mt-2">
+    <button
+      type="button"
+      class="btn btn-primary"
+      routerLink="/nuevahskill"
+      *ngIf="isLogged"
+    >
+      Añadir hard skill
+    </button>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let HSkill of hskills" class="col-sm-6 col-md-6 col-lg-6">
+      <div class="card m-2 shadow rounded-4 border border-4">
+        <div class="card-body">
+          <div class="px-md-1">
+            <div>
+              <i
+                class="{{
+                  HSkill.icon
+                }} fa-4x mb-2 d-flex justify-content-center icon"
+              ></i>
+              <h3 class="d-flex justify-content-center">
+                {{ HSkill.namehs }}
+              </h3>
+            </div>
+          </div>
+
+          <div class="px-md-1">
+            <div class="progress mt-3 mb-1 rounded-3" style="height: 15px">
+              <!--Acá estaba la magia, en style.width dhadjksg-->
+              <div
+                [class]="'bg-' + HSkill?.color"
+                role="progressbar"
+                [style.width]="HSkill?.percentage + '%'"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="container d-flex justify-content-evenly p-2"
+          *ngIf="isLogged"
+        >
+          <button
+            class="btn btn-primary"
+            *ngIf="isLogged"
+            routerLink="/edithskill/{{ HSkill.id }}"
+          >
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+
+          <button
+            class="btn btn-danger"
+            (click)="delete(HSkill.id)"
+            *ngIf="isLogged"
+          >
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

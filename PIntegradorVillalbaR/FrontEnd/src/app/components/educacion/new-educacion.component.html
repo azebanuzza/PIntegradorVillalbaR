@@ -1,0 +1,82 @@
+<div class="container border p-3 mt-3 bg-light">
+  <div class="d-flex justify-content-center">
+    <h1>Añadir educación nueva:</h1>
+  </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="tituloEdu"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="tituloEdu"
+            name="tituloEdu"
+            [(ngModel)]="tituloEdu"
+            required
+            placeholder="Nombre del curso"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="descripcionEdu"></label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="descripcionEdu"
+            name="descripcionEdu"
+            [(ngModel)]="descripcionEdu"
+            required
+            placeholder="Descripción del curso o estudio"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaEdu"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="fechaEdu"
+            name="fechaEdu"
+            [(ngModel)]="fechaEdu"
+            required
+            placeholder="Fecha en formato: Mes Año - Mes Año o sólo el año en que se cursó por última vez"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="imgEdu"></label>
+          <input
+            type="text"
+            [(ngModel)]="imgEdu"
+            class="form-control"
+            id="imgEdu"
+            name="imgEdu"
+            placeholder="URL del logo de la institución educativa"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="altImgEdu"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="altImgEdu"
+            name="altImgEdu"
+            [(ngModel)]="altImgEdu"
+            required
+            placeholder="Texto alternativo para imágenes (accesibilidad)"
+          />
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href=""
+            ><button class="btn btn-dark mt-3">Cancelar y volver</button></a
+          >
+          <button class="btn btn-primary mt-3">Agregar educación</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

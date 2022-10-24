@@ -1,0 +1,82 @@
+<div class="container border p-3 mt-3 bg-light" *ngIf="educa">
+  <div class="d-flex justify-content-center">
+    <h1>Editar educación:</h1>
+  </div>
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="tituloEdu"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="tituloEdu"
+            name="tituloEdu"
+            [(ngModel)]="educa.tituloEdu"
+            required
+            placeholder="Puesto"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="descripcionEdu"></label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="descripcionEdu"
+            name="descripcionEdu"
+            [(ngModel)]="educa.descripcionEdu"
+            required
+            placeholder="Descripción del curso"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="fechaEdu"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="fechaEdu"
+            name="fechaEdu"
+            [(ngModel)]="educa.fechaEdu"
+            required
+            placeholder="Fecha en formato: Mes Año - Mes Año o último Año de cursada"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="imgEdu"></label>
+          <input
+            type="text"
+            [(ngModel)]="educa.imgEdu"
+            class="form-control"
+            id="imgEdu"
+            name="imgEdu"
+            placeholder="URL del logo de la institución educativa"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="altImgEdu"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="altImgEdu"
+            name="altImgEdu"
+            [(ngModel)]="educa.altImgEdu"
+            required
+            placeholder="Texto alternativo para imágenes (accesibilidad)"
+          />
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <button class="btn btn-primary mt-3">Confirmar cambios</button>
+        </div>
+      </form>
+      <a href=""
+        ><button class="btn btn-dark mt-3">Cancelar y volver</button></a
+      >
+    </div>
+  </div>
+</div>

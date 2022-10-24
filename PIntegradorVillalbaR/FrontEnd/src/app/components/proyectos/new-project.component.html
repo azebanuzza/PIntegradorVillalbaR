@@ -1,0 +1,95 @@
+<div class="container border p-3 mt-3 bg-light">
+  <div class="d-flex justify-content-center">
+    <h1>Añadir proyecto nuevo:</h1>
+  </div>
+
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+        <div class="form-group">
+          <label for="proName"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="proName"
+            name="proName"
+            [(ngModel)]="proName"
+            required
+            placeholder="Nombre del proyecto"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="proDescription"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="proDescription"
+            name="proDescription"
+            [(ngModel)]="proDescription"
+            required
+            placeholder="Descripción breve del proyecto (y fecha de inicio o fin)"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="proImg"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="proImg"
+            name="proImg"
+            [(ngModel)]="proImg"
+            required
+            placeholder="Vista previa del proyecto"
+          />
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="opUrl"></label>
+          <input
+            type="text"
+            [(ngModel)]="opUrl"
+            class="form-control"
+            id="opUrl"
+            name="opUrl"
+            placeholder="Enlace a live demo del proyecto"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="altImg"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="altImg"
+            name="altImg"
+            [(ngModel)]="altImg"
+            required
+            placeholder="Texto alternativo de la imagen (accesibilidad)"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="repository"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="repository"
+            name="repository"
+            [(ngModel)]="repository"
+            required
+            placeholder="Enlace al repositorio en GitHub"
+          />
+        </div>
+
+        <div class="d-flex justify-content-between mt-5">
+          <a href=""
+            ><button class="btn btn-dark mt-3">Cancelar y volver</button></a
+          >
+          <button class="btn btn-primary mt-3">Agregar proyecto</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
