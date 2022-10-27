@@ -41,3 +41,8 @@ También se utilizó una combinación de IDEs, frameworks y librerías tales com
 <li>:earth_americas: Mejorar accesibilidad.</li>
 <li>Estas son sólo algunas de varias ideas. Siempre se puede mejorar. :smile:</li>
 </ol>
+
+<hr>
+
+<h3>Contribuciones:</h3>
+<h4>Completar este proyecto no hubiera sido posible sin la ayuda y el compañerismo de mis compañeros de curso, que a través de Discord y de YouTube supieron guiarme y solventar algunas dudas para las cuales no encontraba solución por mi cuenta. Gracias a todos ♥️.</h4>
