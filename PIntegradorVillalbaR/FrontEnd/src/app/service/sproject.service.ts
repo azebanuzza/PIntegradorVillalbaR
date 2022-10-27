@@ -7,7 +7,7 @@ import { Project } from '../model/project';
   providedIn: 'root',
 })
 export class SProjectService {
-  projURL = 'http://localhost:8080/project/';
+  projURL = 'https://bewebportrv.herokuapp.com/project/';
 
   constructor(private httpClient: HttpClient) {}
   public lista(): Observable<Project[]> {

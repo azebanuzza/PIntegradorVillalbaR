@@ -7,7 +7,7 @@ import { SSkills } from '../model/sskills';
   providedIn: 'root',
 })
 export class SskillsService {
-  sskillsURL = 'http://localhost:8080/sskills/';
+  sskillsURL = 'https://bewebportrv.herokuapp.com/sskills/';
 
   constructor(private httpClient: HttpClient) {}
 

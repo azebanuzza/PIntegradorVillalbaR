@@ -7,7 +7,7 @@ import { Languages } from '../model/languages';
   providedIn: 'root',
 })
 export class SlanguagesService {
-  langURL = 'http://localhost:8080/lang/';
+  langURL = 'https://bewebportrv.herokuapp.com/lang/';
 
   constructor(private httpClient: HttpClient) {}
   public lista(): Observable<Languages[]> {

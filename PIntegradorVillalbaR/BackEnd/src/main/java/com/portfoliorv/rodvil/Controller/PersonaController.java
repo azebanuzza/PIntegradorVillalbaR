@@ -11,15 +11,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://portfolio-rv.web.app")
 @RequestMapping ("/personas")
 @RestController
 public class PersonaController {
@@ -41,7 +42,7 @@ public class PersonaController {
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
 
-    /*@PostMapping("/create")
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoPersona dtopersona) {
         if (StringUtils.isBlank(dtopersona.getNombre())) {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio."), HttpStatus.BAD_REQUEST);
@@ -51,11 +52,11 @@ public class PersonaController {
             return new ResponseEntity(new Mensaje("Esa ID de persona ya existe."), HttpStatus.BAD_REQUEST);
         }
 
-        Persona experiencia = new Persona(dtopersona.getNombre(), dtopersona.getDescripcion());
-        iPersonaService.save(experiencia);
+        Persona persona = new Persona(dtopersona.getNombre(), dtopersona.getApellido(), dtopersona.getAboutme(), dtopersona.getImg());
+        iPersonaService.save(persona);
 
         return new ResponseEntity(new Mensaje("Persona agregada."), HttpStatus.OK);
-    }*/
+    }
 
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona) {
